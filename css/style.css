@@ -1,3 +1,38 @@
-h1{
+* {
+    font-family: "Gujarati MT", Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
     color: purple;
+    text-decoration: underline;
+}
+.fancy-header{
+    text-align: center;
+}
+
+
+body{
+    background-image: url("http://iliketowastemytime.com/sites/default/files/new-york-skyline-night-wallpaper_1.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+    /*background-position: right top;*/
+    /*background-attachment: fixed;*/
+    background-size: cover;
+}
+.fancy-list{
+    list-style-type: square;
+}
+
+table{
+    border: dotted red;
+    padding: 15px;
+}
+.fancy-table{
+    background-color: greenyellow;
+    color: red;
+    font-size: 20px;
+}
+
+.fancy-list1{
+    background-color: grey;
 }
