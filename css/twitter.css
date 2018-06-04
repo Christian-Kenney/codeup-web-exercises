@@ -49,6 +49,9 @@ a {
     background-color: white;
     z-index: 1000;
 }
+.tweet-button{
+    float: right;
+}
 .profile {
     background: var(--light-bg);
     height: 80px;
