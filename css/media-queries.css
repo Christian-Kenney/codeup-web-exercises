@@ -1,19 +1,21 @@
+body{
+    font-family: Helvetica;
+}
+
 .alert-info{
     /*width: 100%;*/
     background-color: #c0ffff;
     padding: 40px;
     margin: 2em .5em;
     text-align: center;
+    display: block;
     border: 4px;
     border-style: solid;
     border-color: grey;
     font-size: medium;
     color: black;
-    text
 }
-/*#main{*/
-    /*padding: 3em;*/
-/*}*/
+
 h1{
     text-align: center;
     /*padding: .5em;*/
@@ -74,7 +76,9 @@ footer{
     .alert-info.hidden-on-desktop{
         display: none;
     }
-
+    body{
+        position: relative;
+    }
     h1{
         padding-top: 10px;
         padding-bottom: 20px;
@@ -85,6 +89,7 @@ footer{
     li{
         background-color: transparent;
         margin: .5em .5em;
+        display: inline-block;
         padding: 10px;
         padding-top: 30px;
         text-align: center;
