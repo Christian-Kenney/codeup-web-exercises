@@ -66,9 +66,9 @@
 }
 
 @media screen and (max-width: 768px){
-.one-half, .one-third, .one-fourth, .one-eigth, .two-third, .offset-one-half,{
+    .one-half, .one-third, .one-fourth, .one-eigth, .two-third, .offset-one-half,{
     width: 100%;
-}
+    }
 }
 
 /*.one-third-bigger{*/
