@@ -1,6 +1,9 @@
 /*.jumbotron{*/
     /*.d-small-none*/
 /*}*/
+*{
+    margin: 0;
+}
 
 @media screen and (min-width: 750px) {
 
@@ -31,5 +34,21 @@
     }
     .badge{
         background-color: darkgrey;
+    }
+    .btn-primary{
+        text-align:right;
+    }
+    .input-group-text{
+        width: 100%;
+
+        margin: 0;
+        border-top: transparent;
+        border-right: transparent;
+        border-left: transparent;
+        /*border-bottom: black;*/
+        border-width: 100%;
+    }
+    .input-group{
+        margin: 0;
     }
 }
