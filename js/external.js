@@ -38,3 +38,5 @@ var offerIsNotExpired = confirm("Is the offer not expired?"); // boolean
 var isPremiumMember = confirm("Are you a premium member?"); // boolean
 var productDiscountApplied = offerIsNotExpired && isPremiumMember || (numberOfItems >= numberOfItemsForDiscount);
 alert("You got to use the discount if the answer is true..." + productDiscountApplied );
+
+
