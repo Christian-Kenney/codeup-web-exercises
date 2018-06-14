@@ -86,8 +86,6 @@
      */
 
     function applyDiscount(price, disPercent) {
-        console.log(price);
-        console.log(disPercent);
         return price * (1 - disPercent);
     }
 
