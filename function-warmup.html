@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function-practice</title>
+</head>
+<body>
+    <script>
+        function makeUsername(firstName, age){
+            // firstName.toLowerCase();
+            var returnNumber = firstName.length;
+            var firstLetter = firstName.charAt(0).toLowerCase();
+            var returnString = returnNumber + firstLetter + age;
+            console.log(returnString);
+            return returnString;
+        }
+
+        makeUsername("David", 30);
+    </script>
+</body>
+</html>
