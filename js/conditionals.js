@@ -206,3 +206,4 @@ function multiply(num1, num2){
     return parseInt(num3 * num4);
 }
 console.log(multiply("2", "3"));
+

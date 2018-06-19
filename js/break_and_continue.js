@@ -1,6 +1,6 @@
 var userInput = prompt("please enter a odd number between 1-50");
 
-while(userInput % 2 == 0){
+while(userInput % 2 == 0  || userInput > 50 || userInput < 1){
     userInput = prompt("please enter a odd number between 1-50");
 }
 
