@@ -12,7 +12,7 @@
      * When called, the function should return a message that says hello to the passed in name.
      *
      * Example
-     * > sayHello("codeup") // returns "Hello, codeup!"
+     * > sayHello("codeup") // returns "Hello, codeup!" adding
      */
 
     /**
