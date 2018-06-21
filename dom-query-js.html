@@ -37,10 +37,14 @@
         var subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
-            subHeader.color = 'blue';
+            subHeader.style.color = 'blue';
         // TODO: Uncomment the next line and get all list items
-        // var listItems = ;
+        var listItems = document.getElementsByTagName('li');
 
+        for(var i = 0; i < 6; i++){
+            listItems.style.color = 'blue';
+
+        }
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
 
