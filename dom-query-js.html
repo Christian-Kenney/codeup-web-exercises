@@ -5,6 +5,12 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
+<button id="btn1">Is Cool</button>
+<button id="btn2">h2 blue</button>
+<button id="btn3">grey</button>
+<button id="btn4">blue</button>
+<button id="btn5">mission accomplished</button>
+
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -32,33 +38,44 @@
         var mainHeader = document.getElementById('main-header');
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        var listener = function () {
+            mainHeader.innerHTML = "JavaScript is Cool";
+        }
+        document.getElementById('btn1').addEventListener('click', listener, false);
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
+        var listener2 = function () {
             subHeader.style.color = 'blue';
+        }
+        document.getElementById('btn2').addEventListener('click', listener2, false);
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
+        var listener3 = function () {
+            for (var i = 0; i < 6; i += 2) {
+                listItems[i].style.color = 'grey';
 
-        for(var i = 0; i < 6; i+= 2){
-            listItems[i].style.color = 'grey';
-
-        }
-        for(var i = 0; i < listItems.length; i++){
-            var dbId = document.getElementsByTagName('li')[i].getAttribute('data-dbid');
-            if(dbId == 1){
-                listItems[i].style.color = 'blue';
             }
         }
-        // var dbid1 = listItems.getElementsByTagName("1");
-        // dbid1.style.color = 'blue';
-        // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
+        document.getElementById('btn3').addEventListener('click', listener3, false);
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName('sub-paragraph');
-        subParagraphs[0].innerText = "Mission Accomplished";
+        var listener4 = function () {
+
+            for (var i = 0; i < listItems.length; i++) {
+                var dbId = document.getElementsByTagName('li')[i].getAttribute('data-dbid');
+                if (dbId == 1) {
+                    listItems[i].style.color = 'blue';
+                }
+            }
+        }
+        document.getElementById('btn4').addEventListener('click', listener4, false);
+
+        var listener5 = function () {
+            var subParagraphs = document.getElementsByClassName('sub-paragraph');
+            subParagraphs[0].innerText = "Mission Accomplished";
+        }
+        document.getElementById('btn5').addEventListener('click', listener5, false);
 
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
