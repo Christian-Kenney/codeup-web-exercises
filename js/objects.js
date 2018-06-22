@@ -49,13 +49,13 @@
         }
     });
 
-var books = [{
+    var books = [{
     title: 'Harry Potter',
-    author: {
-        firstName: "JK",
-        lastName: "Rowling"
-        }
-},
+        author: {
+            firstName: "JK",
+            lastName: "Rowling"
+            }
+    },
     {
         title: 'Goosebumbs',
         author: {
