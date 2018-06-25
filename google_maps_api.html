@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google Maps API Exercise</title>
+    <style>
+        #map-canvas{
+            height: 700px;
+        }</style>
+</head>
+<body>
+<div id="map-canvas"></div>
+
+<!-- Script to show address on map -->
+<script>
+    var marker;
+    function initMap() {
+        // "use strict";
+        var mapCanvas = document.getElementById("map-canvas");
+        var mapOptions = {
+            zoom: 17,
+            center: {
+                lat: 29.520058,
+                lng: -98.488035
+            }
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        var geo = new google.maps.Geocoder();
+
+        geo.geocode({address: "76 NE Interstate 410 Loop, San Antonio, TX 78216"}, function(response, status) {
+
+            if (status === "OK"){
+                map.setCenter(response[0].geometry.location);
+
+            }
+            else{
+
+            }
+        });
+        var image1 = {
+            url:"https://media.glassdoor.com/sqll/295508/pappadeaux-seafood-kitchen-squarelogo.png",
+            scaledSize: new google.maps.Size(60,60)}
+
+        marker = new google.maps.Marker({position:{
+                lat: 29.519626,
+                lng: -98.488149,
+            },
+            icon: image1,
+            animation: google.maps.Animation.DROP,
+            map: map});
+
+        var infowindow = new google.maps.InfoWindow({
+            content: "<ul><li>Tasty, Tasty food</li><li>Expensive</li></ul>"
+        });
+
+        marker.addListener("click", toggleBounce);
+        marker.addListener("click", function(){
+            infowindow.open(map,marker);
+        });
+
+    }
+    function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
+
+
+
+
+
+
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxIPbNd4ljI6NdSyP5ugk4XoKDzw2VEZM&callback=initMap"
+        async defer></script>
+</body>
+</html>
