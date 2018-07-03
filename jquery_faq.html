@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ</title>
+</head>
+<body>
+
+<dl>
+    <dt>Yosemite</dt>
+    <dd>Its cold (trust me)</dd>
+    <dt>Crater Lake</dt>
+    <dd>There is water there</dd>
+    <dt>Death Valley</dt>
+    <dd>Sometimes it gets really hot, other times its really cold</dd>
+    <dt>Grand Canyon</dt>
+    <dd>"big hole in ground"</dd>
+    <dt>North Cascades</dt>
+    <dd>Go opposite of south to get there</dd>
+    <dt>Yellowstone</dt>
+    <dd>Not as yellow as the name implies</dd>
+</dl>
+<ul>
+    <h3 id="header1" class="h33">National Park</h3>
+        <li class="lii">
+            fact.
+        </li>
+        <li class="lii">
+            fact.
+        </li>
+        <li class="lii">
+            fact.
+        </li >
+    </ul>
+    <ul><h3 id="header1">National Park</h3>
+        <li class="lii">
+        fact.
+    </li>
+        <li class="lii">
+            fact.
+        </li>
+        <li class="lii">
+            fact.
+        </li>
+    </ul>
+    <ul><h3 id="header1">National Park</h3>
+        <li class="lii">
+            fact.
+        </li>
+        <li class="lii">
+            fact.
+        </li>
+        <li class="lii">
+            fact.
+        </li>
+    </ul>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<style>
+    .invisible{
+        background-color: yellow;
+    }
+    .headerColor{
+        background-color: red;
+    }
+</style>
+<script>
+    $('dd').click(function(){
+        $(this).toggleClass('invisible');
+    });
+    $('dt').click(function(){
+        $(this).toggleClass('headerColor');
+    });
+
+    $('dt').click(function(){
+        $(this).toggleClass('headerColor');
+    });
+    $('h3').click(function(){
+        $('ul').children().last().css('font-weight', 'bold');
+    });
+
+
+
+</script>
+
+</body>
+</html>
