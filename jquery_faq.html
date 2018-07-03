@@ -5,7 +5,13 @@
     <title>FAQ</title>
 </head>
 <body>
-
+<div id="newsletter">
+    <h3>Will you join our newsletter?</h3>
+    <span id="x">X</span>
+</div>
+<br>
+<br>
+<br>
 <dl>
     <dt>Yosemite</dt>
     <dd>Its cold (trust me)</dd>
@@ -20,6 +26,7 @@
     <dt>Yellowstone</dt>
     <dd>Not as yellow as the name implies</dd>
 </dl>
+    <h2>Register for the site!</h2>
     <h3 id="header1" class="h33">National Park</h3  >
     <ul>
 
@@ -67,6 +74,12 @@
     .headerColor{
         background-color: red;
     }
+    li{
+        display: none;
+    }
+    h2{
+        display: none;
+    }
 </style>
 <script>
     $('dd').click(function(){
@@ -83,8 +96,14 @@
     //     $('ul').children().last().css('font-weight', 'bold');
     // });
     $('h3').click(function(){
-        $(this).next().children().css('font-weight', 'bold');
+        $(this).next().children().slideDown();
     })
+    $('#x').click(function(){
+        $('#newsletter').hide();
+    })
+    $(function(){
+        $('h2').delay(8000).fadeIn(2000);
+    });
 
 
 
