@@ -19,11 +19,9 @@ var people = [
     }
 ];
 $('#add-names-btn').click(function(){
+    $('#names-list').text("");
     for(var i = 0; i < people.length; i++){
-        var nameOut = people[i].name;
-        var colorr = people[i].favColor;
-        $('#names-list').append("<li style='color: " + colorr + "'>" + nameOut + "</li>");
-
+        $('#names-list').append("<li style='color: " + people[i].favColor + "'>" + people[i].name + "</li>");
     }
 
 
