@@ -26,3 +26,17 @@ $('#add-names-btn').click(function(){
 
 
 });
+
+// function buildList(arrObjs) {
+//     var output = "";
+//     output += "<ul>";
+//     arrObjs.forEach(function(person) {
+//         output += "<li style='color:"+ person.favColor + "'>" + person.name + "</li>";
+//     });
+//     output += "</ul>";
+//     return output;
+// }
+//
+// $('#add-names-btn').click(function() {
+//     $('#names-list').html(buildList(people));
+// });
