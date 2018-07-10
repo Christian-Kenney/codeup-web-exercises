@@ -7,11 +7,27 @@
 <body>
 <div id="posts"></div>
 
-</body>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
     $.ajax("data/blog.json").done(function (ajaxData) {
+        for(var i = 0; i < ajaxData.length; i++){
+            $('#posts')
+                .append('<div>')
+                .append('<h1>' + ajaxData[i].title + '</h1>')
+                .append('<p>' + ajaxData[i].content + '</p>')
+                .append('<div>');
+                for (var j = 0; j < ajaxData[i].categories.length; j++) {
+                    $('#posts').append("<th>" + ajaxData[i].categories[j] + "</th>" + " ");
 
+                }
+            $('#posts')
+                .append()
+                .append('</div>')
+                .append('</div>');
+        }
     })
 </script>
+</body>
+
 </html>
