@@ -3,7 +3,7 @@ function initMap() {
     // "use strict";
     var mapCanvas = document.getElementById("map-canvas");
     var mapOptions = {
-        zoom: 17,
+        zoom: 11,
         center: {
             lat: 29.520058,
             lng: -98.488035
@@ -25,12 +25,13 @@ function initMap() {
     });
     var image1 = {
         // url:"https://media.glassdoor.com/sqll/295508/pappadeaux-seafood-kitchen-squarelogo.png",
-        scaledSize: new google.maps.Size(60,60)}
+        scaledSize: new google.maps.Size(30,30)}
 
     marker = new google.maps.Marker({position:{
             lat: 29.519626,
             lng: -98.488149,
         },
+        draggable: true,
         icon: image1,
         animation: google.maps.Animation.DROP,
         map: map});
@@ -43,6 +44,7 @@ function initMap() {
     marker.addListener("click", function(){
         infowindow.open(map,marker);
     });
+
 
 }
 function toggleBounce() {
@@ -111,8 +113,8 @@ $.get("http://api.openweathermap.org/data/2.5/forecast?id=4726206", {
             .append('<div class="eachDay">' +
                 "<a class=\"temp\">" + Math.round(max[i]) + " / " + "</a>"  +
                 "<a class=\"temp\">" + Math.round(min[i]) + "</a>" + "<br />" +
-                "<a class=\"weatherStatus\">" + data.list[i].weather[0].main + "</a>" + ": " +
-                "<a class=\"weatherStatus\">" + data.list[i].weather[0].description + "</a>" + "<br />" +
+                "<a class=\"weatherStatus\">" + data.list[day].weather[0].main + "</a>" + ": " +
+                "<a class=\"weatherStatus\">" + data.list[day].weather[0].description + "</a>" + "<br />" +
                 "<a class=\"humidity\">" + "Humidity: "+ data.list[day].main.humidity + "</a>" + "<br />" +
                 "<a class=\"Wind\">" + "Wind: "+ data.list[day].wind.speed + "</a>" + "<br />" +
                 "<a class=\"humidity\">" + "Humidity: "+ data.list[day].main.pressure + "</a>" + "<br />" + "<br />" +
