@@ -24,8 +24,7 @@ function initMap() {
         }
     });
     var image1 = {
-        // url:"https://media.glassdoor.com/sqll/295508/pappadeaux-seafood-kitchen-squarelogo.png",
-        scaledSize: new google.maps.Size(30,30)}
+        scaledSize: new google.maps.Size(30,30)};
 
     marker = new google.maps.Marker({position:{
             lat: 29.519626,
@@ -84,29 +83,23 @@ $.get("http://api.openweathermap.org/data/2.5/forecast?id=4726206", {
     }
 
     function getMax(data){
+        console.log(data);
         var dayMax = -200;
         var dayMaxs = [];
         var dayCounter = 0;
         for(var i = 0; i < 24; i++){
-            console.log(i);
             if(data.list[i].dt_txt.charAt(11) == 0 && data.list[i].dt_txt.charAt(12) == 0 && i != 0){
-                // dayMaxs[dayCounter] = dayMax;
                 dayMaxs[dayCounter] = dayMax;
 
                 dayCounter++;
                 dayMax = 0;
             }
             if(dayCounter === 3){
-                console.log(dayMaxs);
                 return dayMaxs;
             }
             if(data.list[i].main.temp_max > dayMax){
-                console.log("Temp_Max " + data.list[i].main.temp_max);
-                console.log("dayMax " + dayMax);
-                console.log("daycounter " + dayCounter);
                 dayMax = data.list[i].main.temp_max;
             }
-            // console.log(dayMaxs);
         }
     }
     function printStuff(max, min, data){

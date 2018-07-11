@@ -7,6 +7,7 @@ body{
 #days{
     background-color: black;
     color: white;
+    margin-left: 275px;
     /*width: 100%;*/
 }
 .eachDay{
@@ -14,7 +15,8 @@ body{
     float: left;
     border: 2px solid #b9c1b9;
     background-color: black;
-    width: 33%;
+    width: 25%;
+    margin-left: 25px;
 }
 
 .days{
@@ -23,3 +25,10 @@ body{
 .temp{
     font-size: 45px;
 }
+
+#map-canvas{
+    margin-left: 200px;
+    height: 700px;
+    width: 75%;
+}
+
