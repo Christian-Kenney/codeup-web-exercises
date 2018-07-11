@@ -70,6 +70,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast?id=4726206", {
         var dayCounter = 0;
         for(var i = 0; i < 24; i++){
             if(data.list[i].dt_txt.charAt(11) == 0 && data.list[i].dt_txt.charAt(12) == 0 && i != 0){
+                dayMins[dayCounter] = data.list[i].main.temp_min;
                 dayCounter++;
                 dayMin = 200;
             }
@@ -77,30 +78,33 @@ $.get("http://api.openweathermap.org/data/2.5/forecast?id=4726206", {
                 return dayMins;
             }
             if(data.list[i].main.temp_min < dayMin){
-                dayMins[dayCounter] = data.list[i].main.temp_min;
+                dayMin = data.list[i].main.temp_min;
             }
         }
     }
 
     function getMax(data){
-        var dayMax = 0;
+        var dayMax = -200;
         var dayMaxs = [];
         var dayCounter = 0;
         for(var i = 0; i < 24; i++){
+            console.log(i);
             if(data.list[i].dt_txt.charAt(11) == 0 && data.list[i].dt_txt.charAt(12) == 0 && i != 0){
                 // dayMaxs[dayCounter] = dayMax;
+                dayMaxs[dayCounter] = dayMax;
+
                 dayCounter++;
                 dayMax = 0;
             }
             if(dayCounter === 3){
-
+                console.log(dayMaxs);
                 return dayMaxs;
             }
             if(data.list[i].main.temp_max > dayMax){
-                // console.log(data.list[i].main.temp_max);
-                // console.log(dayMax);
-                dayMaxs[dayCounter] = data.list[i].main.temp_max;
-
+                console.log("Temp_Max " + data.list[i].main.temp_max);
+                console.log("dayMax " + dayMax);
+                console.log("daycounter " + dayCounter);
+                dayMax = data.list[i].main.temp_max;
             }
             // console.log(dayMaxs);
         }
