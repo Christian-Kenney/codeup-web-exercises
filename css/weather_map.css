@@ -1,0 +1,25 @@
+body{
+    background-color: deepskyblue;
+}
+.container{
+    background-color: greenyellow;
+}
+#days{
+    background-color: black;
+    color: white;
+    /*width: 100%;*/
+}
+.eachDay{
+    text-align: center;
+    float: left;
+    border: 2px solid #b9c1b9;
+    background-color: black;
+    width: 33%;
+}
+
+.days{
+    background-color: black;
+}
+.temp{
+    font-size: 45px;
+}
