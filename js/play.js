@@ -20,7 +20,7 @@ $(function() {
 
     $("p").dblclick( function(){
         $(this).css('font-size', '30px')
-    })
+    });
     $('body').keyup(function(e){
         var x = e.keycode
         console.log(e.key);
